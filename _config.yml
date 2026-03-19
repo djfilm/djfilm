@@ -1,37 +1,96 @@
 # =============================================================================
-# _config.yml — Configuration Jekyll — DJfilm
+#  DJfilm — Configuration Jekyll (GitHub Pages + SEO)
 # =============================================================================
 
-# --- Identité du site ---
-title:          "DJfilm — Vidéaste Professionnel à Agen"
-description:    "DJfilm, vidéaste professionnel à Agen (47). Films de mariage, événements d'entreprise, publicités et séminaires en Lot-et-Garonne et Nouvelle-Aquitaine."
-url:            "https://djfilm.fr"
-baseurl:        ""
-lang:           "fr"
-locale:         "fr_FR"
+# ------------------------------ 1) Métadonnées site ---------------------------
+title:       "DJfilm — Vidéaste Professionnel à Agen"
+tagline:     "Films de mariage, événements d'entreprise et publicités en Nouvelle-Aquitaine"
+description: "DJfilm, vidéaste professionnel à Agen (47). Films de mariage, événements d'entreprise, publicités et séminaires en Lot-et-Garonne et Nouvelle-Aquitaine."
+lang:        fr
+locale:      fr_FR
+timezone:    Europe/Paris
 
-# --- Auteur ---
+# ------------------------------ 2) URL & déploiement -------------------------
+url:     "https://djfilm.fr"
+baseurl: ""
+
+# Image par défaut Open Graph/Twitter
+og_image: "/assets/images/og-default.jpg"
+
+# ------------------------------ 3) Auteur ------------------------------------
 author:
-  name:         "DJfilm"
-  email:        "contact@djfilm.fr"
-  location:     "Agen, 47000, France"
+  name:           "DJfilm"
+  prenom_nom:     "Djibril Diallo"
+  enterprise:     "DJfilm"
+  job_title:      "Vidéaste professionnel"
+  email:          "contact@djfilm.fr"
+  location:       "Agen, 47000, France"
+  address_city:   "Agen"
+  address_postal: "47000"
+  address_region: "Lot-et-Garonne"
+  address_country: "FR"
+  url:            "https://djfilm.fr"
+  instagram:      "https://instagram.com/djfilm_agen"
+  vimeo:          "https://vimeo.com/djfilm"
+  linkedin:       "https://www.linkedin.com/company/djfilm-agen"
+  youtube:        "https://youtube.com/@djfilm"
+  sameAs:
+    - "https://instagram.com/djfilm_agen"
+    - "https://vimeo.com/djfilm"
+    - "https://www.linkedin.com/company/djfilm-agen"
+    - "https://youtube.com/@djfilm"
 
-# --- Plugins compatibles GitHub Pages ---
+# ------------------------------ 4) Plugins compatibles GitHub Pages -----------
 plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - jekyll-sitemap   # génère /sitemap.xml automatiquement
+  - jekyll-seo-tag   # balises SEO meta
 
-# --- Build ---
-markdown:       kramdown
-highlighter:    rouge
-permalink:      pretty
-timezone:       Europe/Paris
+# ------------------------------ 5) SEO (jekyll-seo-tag) ----------------------
+twitter:
+  username: djfilm_agen
+  card:     summary_large_image
+
+social:
+  name:  DJfilm
+  links:
+    - "https://instagram.com/djfilm_agen"
+    - "https://vimeo.com/djfilm"
+    - "https://www.linkedin.com/company/djfilm-agen"
+    - "https://youtube.com/@djfilm"
+
+google_analytics: ""
+
+# ------------------------------ 6) Build / rendu -----------------------------
+markdown:    kramdown
+highlighter: rouge
+permalink:   pretty
 
 kramdown:
-  input:        GFM
-  hard_wrap:    false
+  input:      GFM
+  hard_wrap:  false
+  auto_ids:   true
 
-# --- Fichiers à exclure du build ---
+strict_front_matter: false
+future:              false
+lsi:                 false
+
+# ------------------------------ 7) Defaults de front matter ------------------
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+      lang:   "fr"
+      image:  "/assets/images/og-default.jpg"
+      robots: "index,follow"
+
+# ------------------------------ 8) Répertoires -------------------------------
+include:
+  - _pages
+  - robots.txt
+  - manifest.json
+
+# ------------------------------ 9) Fichiers à exclure du build ---------------
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -40,47 +99,6 @@ exclude:
   - .bundle/
   - .sass-cache/
   - .git/
+  - .github/
+  - README.md
   - "*.sh"
-  - "*.md"
-  - "!README.md"
-
-# --- Répertoires additionnels ---
-include:
-  - _pages
-  - robots.txt
-  - manifest.json
-
-# --- Defaults de front matter ---
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  - scope:
-      path: ""
-    values:
-      image: "/assets/images/og-default.jpg"
-
-# --- SEO (jekyll-seo-tag) ---
-twitter:
-  username:     djfilm_agen
-  card:         summary_large_image
-
-social:
-  name:         DJfilm
-  links:
-    - https://instagram.com/djfilm_agen
-    - https://vimeo.com/djfilm
-    - https://www.linkedin.com/company/djfilm-agen
-    - https://youtube.com/@djfilm
-
-# --- Google Analytics (remplacer l'ID) ---
-google_analytics: ""
-
-# --- Sitemap ---
-sitemap:
-  exclude:
-    - "/mentions-legales/"
-    - "/politique-de-confidentialite/"
-    - "/404.html"

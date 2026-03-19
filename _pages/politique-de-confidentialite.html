@@ -5,6 +5,7 @@ permalink: /politique-de-confidentialite/
 seo_title: "Politique de Confidentialité | DJfilm Agen"
 seo_description: "Politique de confidentialité et traitement des données personnelles du site DJfilm.fr."
 noindex: true
+sitemap: false
 breadcrumbs:
   - name: "Politique de confidentialité"
     url: "/politique-de-confidentialite/"
@@ -12,7 +13,10 @@ breadcrumbs:
 
 {% assign d = site.data.legal.politique_confidentialite %}
 
-{% include components/page-hero.html label="RGPD & données personnelles" title="Politique de confidentialité" subtitle="Dernière mise à jour : {{ d.last_updated }}" %}
+{% assign hero_label    = "RGPD & données personnelles" %}
+{% assign hero_title    = "Politique de confidentialité" %}
+{% assign hero_subtitle = "Dernière mise à jour : " | append: d.last_updated %}
+{% include components/page-hero.html label=hero_label title=hero_title subtitle=hero_subtitle %}
 
 <section class="section-legal section" aria-labelledby="privacy-title">
   <div class="container">

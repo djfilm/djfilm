@@ -5,6 +5,7 @@ permalink: /mentions-legales/
 seo_title: "Mentions Légales | DJfilm Agen"
 seo_description: "Mentions légales du site DJfilm.fr — vidéaste professionnel à Agen, Lot-et-Garonne."
 noindex: true
+sitemap: false
 breadcrumbs:
   - name: "Mentions légales"
     url: "/mentions-legales/"
@@ -12,7 +13,10 @@ breadcrumbs:
 
 {% assign d = site.data.legal.mentions_legales %}
 
-{% include components/page-hero.html label="Informations légales" title="Mentions légales" subtitle="Informations légales relatives au site djfilm.fr" %}
+{% assign hero_label    = "Informations légales" %}
+{% assign hero_title    = "Mentions légales" %}
+{% assign hero_subtitle = "Informations légales relatives au site djfilm.fr" %}
+{% include components/page-hero.html label=hero_label title=hero_title subtitle=hero_subtitle %}
 
 <section class="section-legal section" aria-labelledby="legal-title">
   <div class="container">

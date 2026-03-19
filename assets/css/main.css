@@ -100,6 +100,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -310,8 +311,8 @@ main a:not([class]):hover {
 
 .site-header.is-scrolled {
   background: rgba(8,8,8,.92);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   border-bottom-color: var(--c-border);
 }
 
@@ -520,8 +521,8 @@ main a:not([class]):hover {
 .hero__scroll {
   position: absolute;
   bottom: var(--space-8);
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -532,6 +533,7 @@ main a:not([class]):hover {
   text-transform: uppercase;
   color: var(--c-text-faint);
   animation: scrollBounce 2s ease-in-out infinite;
+  will-change: transform;
 }
 .hero__scroll-line {
   width: 1px;
@@ -540,8 +542,8 @@ main a:not([class]):hover {
 }
 
 @keyframes scrollBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50%       { transform: translateX(-50%) translateY(6px); }
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
 }
 
 /* =============================================================================
@@ -753,6 +755,7 @@ main a:not([class]):hover {
   line-height: 1;
   margin-bottom: var(--space-5);
   letter-spacing: -.04em;
+  -webkit-user-select: none;
   user-select: none;
 }
 .value-item__title {
@@ -1560,8 +1563,8 @@ a.contact-channel__value:hover { color: var(--c-gold); }
   font-size: var(--text-sm);
   color: var(--c-text);
   transition: border-color var(--dur-base), box-shadow var(--dur-base);
-  appearance: none;
   -webkit-appearance: none;
+  appearance: none;
 }
 .form-input::placeholder,
 .form-textarea::placeholder { color: var(--c-text-faint); }
@@ -1759,10 +1762,15 @@ a.contact-channel__value:hover { color: var(--c-gold); }
   line-height: .9;
   letter-spacing: -.04em;
   margin-bottom: var(--space-4);
+  -webkit-user-select: none;
   user-select: none;
 }
 .page-404__title { font-size: var(--text-3xl); margin-bottom: var(--space-4); }
 .page-404__text { font-size: var(--text-md); color: var(--c-text-muted); max-width: 44ch; margin: 0 auto var(--space-10); line-height: var(--leading-loose); }
+.page-404__actions { display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap; }
+.page-404__help { margin-top: var(--space-12); }
+.page-404__help-text { font-size: var(--text-xs); color: var(--c-text-faint); }
+.page-404__help-link { color: var(--c-gold); }
 
 /* =============================================================================
    20. ANIMATIONS (Intersection Observer)
@@ -1826,8 +1834,8 @@ a.contact-channel__value:hover { color: var(--c-gold); }
     inset: 0;
     top: var(--header-h);
     background: rgba(8,8,8,.98);
-    backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
     transform: translateX(100%);
     transition: transform var(--dur-slow) var(--ease-smooth);
     z-index: 99;

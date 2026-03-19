@@ -4,6 +4,7 @@ page_id: 404
 seo_title: "Page introuvable (404) | DJfilm Agen"
 seo_description: "La page que vous recherchez n'existe pas ou a été déplacée."
 noindex: true
+sitemap: false
 permalink: /404.html
 ---
 
@@ -17,14 +18,14 @@ permalink: /404.html
       La page que vous cherchez a peut-être été déplacée, renommée ou n'a jamais existé.
       Mais ne vous inquiétez pas, le reste du site est là.
     </p>
-    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+    <div class="page-404__actions">
       <a href="{{ '/' | relative_url }}" class="btn btn--gold btn--lg">Retour à l'accueil</a>
       <a href="{{ '/portfolio/' | relative_url }}" class="btn btn--ghost btn--lg">Voir le portfolio</a>
     </div>
-    <div style="margin-top: 3rem;">
-      <p style="font-size: .8rem; color: var(--c-text-faint);">
+    <div class="page-404__help">
+      <p class="page-404__help-text">
         Besoin d'aide ?
-        <a href="mailto:{{ g.contact.email }}" style="color: var(--c-gold);">{{ g.contact.email }}</a>
+        <a href="mailto:{{ g.contact.email }}" class="page-404__help-link">{{ g.contact.email }}</a>
       </p>
     </div>
   </div>
