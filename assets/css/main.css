@@ -1958,9 +1958,153 @@ a.contact-channel__value:hover { color: var(--c-gold); }
 }
 
 /* =============================================================================
-   22. PRINT (optionnel)
+   22. FOND VIVANT — Orbes lumineux organiques animés
+   ============================================================================= */
+
+/* Conteneur fixe, derrière tout le contenu */
+.bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  /* Fond base : blanc chaud avec très légère teinte naturelle */
+  background: var(--c-bg);
+}
+
+/* Style commun à tous les orbes */
+.bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+  /* blur fort pour un fondu totalement organique */
+  filter: blur(90px);
+}
+
+/* Orbe 1 — grande sphère vert forêt, coin haut gauche */
+.bg-orb--1 {
+  width: 780px;
+  height: 780px;
+  top: -280px;
+  left: -200px;
+  background: radial-gradient(circle at 40% 40%,
+    rgba(80, 148, 108, .22) 0%,
+    rgba(80, 148, 108, .06) 45%,
+    transparent 70%
+  );
+  animation: orb1 30s ease-in-out infinite;
+}
+
+/* Orbe 2 — sphère sage moyen, côté droit */
+.bg-orb--2 {
+  width: 620px;
+  height: 620px;
+  top: 15%;
+  right: -180px;
+  background: radial-gradient(circle at 55% 45%,
+    rgba(110, 175, 135, .18) 0%,
+    rgba(110, 175, 135, .05) 50%,
+    transparent 70%
+  );
+  animation: orb2 38s ease-in-out infinite;
+}
+
+/* Orbe 3 — large sphère vert clair, milieu bas */
+.bg-orb--3 {
+  width: 860px;
+  height: 860px;
+  bottom: -320px;
+  left: 20%;
+  background: radial-gradient(circle at 50% 50%,
+    rgba(140, 200, 160, .16) 0%,
+    rgba(140, 200, 160, .04) 50%,
+    transparent 68%
+  );
+  animation: orb3 44s ease-in-out infinite;
+}
+
+/* Orbe 4 — petite sphère chaude (celadon), centre gauche */
+.bg-orb--4 {
+  width: 480px;
+  height: 480px;
+  top: 50%;
+  left: -80px;
+  background: radial-gradient(circle at 50% 50%,
+    rgba(160, 215, 180, .15) 0%,
+    rgba(160, 215, 180, .04) 55%,
+    transparent 70%
+  );
+  animation: orb4 34s ease-in-out infinite;
+}
+
+/* Orbe 5 — accent lumineux, coin haut droit */
+.bg-orb--5 {
+  width: 400px;
+  height: 400px;
+  top: -80px;
+  right: 10%;
+  background: radial-gradient(circle at 50% 50%,
+    rgba(200, 235, 210, .18) 0%,
+    rgba(200, 235, 210, .05) 50%,
+    transparent 70%
+  );
+  animation: orb5 26s ease-in-out infinite;
+}
+
+/* — Keyframes — mouvements lents, organiques, décalés */
+@keyframes orb1 {
+  0%,  100% { transform: translate(0px,   0px) scale(1); }
+  25%        { transform: translate(60px,  80px) scale(1.06); }
+  50%        { transform: translate(30px, 140px) scale(.97); }
+  75%        { transform: translate(-50px, 60px) scale(1.04); }
+}
+
+@keyframes orb2 {
+  0%,  100% { transform: translate(0px,   0px) scale(1); }
+  30%        { transform: translate(-90px, 60px) scale(1.08); }
+  60%        { transform: translate(40px, 110px) scale(.95); }
+  80%        { transform: translate(-30px, -50px) scale(1.05); }
+}
+
+@keyframes orb3 {
+  0%,  100% { transform: translate(0px, 0px) scale(1); }
+  35%        { transform: translate(-70px, -80px) scale(1.07); }
+  70%        { transform: translate(100px, -30px) scale(.96); }
+}
+
+@keyframes orb4 {
+  0%,  100% { transform: translate(0px,  0px) scale(1); }
+  40%        { transform: translate(80px, -100px) scale(1.1); }
+  75%        { transform: translate(30px,  60px) scale(.93); }
+}
+
+@keyframes orb5 {
+  0%,  100% { transform: translate(0px,  0px) scale(1); }
+  50%        { transform: translate(-60px, 70px) scale(1.12); }
+}
+
+/* Sections avec fond alterné — léger calque sur les orbes */
+.section-intro,
+.section-portfolio-preview,
+.section-about-story,
+.section-about-process,
+.section-about-zone {
+  background: rgba(240, 244, 238, .72);
+}
+
+/* Sections sombres : pas de transparence — elles masquent les orbes */
+.section-stats,
+.cta-banner,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* =============================================================================
+   23. PRINT (optionnel)
    ============================================================================= */
 @media print {
+  .bg-canvas { display: none; }
   .site-header, .site-footer, .cta-banner, .hero__scroll { display: none !important; }
   body { background: #fff; color: #000; }
   a { color: #000; }

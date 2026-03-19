@@ -7,6 +7,15 @@
 </head>
 <body class="{% if page.body_class %}{{ page.body_class }}{% endif %}" data-page="{{ page.page_id | default: '' }}">
 
+  <!-- Fond vivant — orbes lumineux organiques -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="bg-orb bg-orb--1"></div>
+    <div class="bg-orb bg-orb--2"></div>
+    <div class="bg-orb bg-orb--3"></div>
+    <div class="bg-orb bg-orb--4"></div>
+    <div class="bg-orb bg-orb--5"></div>
+  </div>
+
   {% include header.html %}
 
   <main id="main-content" tabindex="-1">
