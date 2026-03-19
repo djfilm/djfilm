@@ -110,7 +110,7 @@ body {
   font-weight: 400;
   line-height: var(--leading-normal);
   color: var(--c-text);
-  background-color: var(--c-bg);
+  background-color: transparent; /* fond géré par .bg-canvas */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -1977,19 +1977,18 @@ a.contact-channel__value:hover { color: var(--c-gold); }
   position: absolute;
   border-radius: 50%;
   will-change: transform;
-  /* blur fort pour un fondu totalement organique */
-  filter: blur(90px);
+  filter: blur(60px);
 }
 
 /* Orbe 1 — grande sphère vert forêt, coin haut gauche */
 .bg-orb--1 {
-  width: 780px;
-  height: 780px;
-  top: -280px;
-  left: -200px;
+  width: 900px;
+  height: 900px;
+  top: -300px;
+  left: -250px;
   background: radial-gradient(circle at 40% 40%,
-    rgba(80, 148, 108, .22) 0%,
-    rgba(80, 148, 108, .06) 45%,
+    rgba(80, 160, 110, .55) 0%,
+    rgba(80, 160, 110, .18) 45%,
     transparent 70%
   );
   animation: orb1 30s ease-in-out infinite;
@@ -1997,13 +1996,13 @@ a.contact-channel__value:hover { color: var(--c-gold); }
 
 /* Orbe 2 — sphère sage moyen, côté droit */
 .bg-orb--2 {
-  width: 620px;
-  height: 620px;
+  width: 700px;
+  height: 700px;
   top: 15%;
-  right: -180px;
+  right: -200px;
   background: radial-gradient(circle at 55% 45%,
-    rgba(110, 175, 135, .18) 0%,
-    rgba(110, 175, 135, .05) 50%,
+    rgba(100, 185, 135, .45) 0%,
+    rgba(100, 185, 135, .12) 50%,
     transparent 70%
   );
   animation: orb2 38s ease-in-out infinite;
@@ -2011,27 +2010,27 @@ a.contact-channel__value:hover { color: var(--c-gold); }
 
 /* Orbe 3 — large sphère vert clair, milieu bas */
 .bg-orb--3 {
-  width: 860px;
-  height: 860px;
-  bottom: -320px;
-  left: 20%;
+  width: 1000px;
+  height: 1000px;
+  bottom: -380px;
+  left: 15%;
   background: radial-gradient(circle at 50% 50%,
-    rgba(140, 200, 160, .16) 0%,
-    rgba(140, 200, 160, .04) 50%,
+    rgba(130, 210, 160, .40) 0%,
+    rgba(130, 210, 160, .10) 50%,
     transparent 68%
   );
   animation: orb3 44s ease-in-out infinite;
 }
 
-/* Orbe 4 — petite sphère chaude (celadon), centre gauche */
+/* Orbe 4 — sphère celadon, centre gauche */
 .bg-orb--4 {
-  width: 480px;
-  height: 480px;
+  width: 560px;
+  height: 560px;
   top: 50%;
-  left: -80px;
+  left: -100px;
   background: radial-gradient(circle at 50% 50%,
-    rgba(160, 215, 180, .15) 0%,
-    rgba(160, 215, 180, .04) 55%,
+    rgba(150, 220, 180, .38) 0%,
+    rgba(150, 220, 180, .08) 55%,
     transparent 70%
   );
   animation: orb4 34s ease-in-out infinite;
@@ -2039,13 +2038,13 @@ a.contact-channel__value:hover { color: var(--c-gold); }
 
 /* Orbe 5 — accent lumineux, coin haut droit */
 .bg-orb--5 {
-  width: 400px;
-  height: 400px;
-  top: -80px;
-  right: 10%;
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  right: 8%;
   background: radial-gradient(circle at 50% 50%,
-    rgba(200, 235, 210, .18) 0%,
-    rgba(200, 235, 210, .05) 50%,
+    rgba(180, 235, 200, .42) 0%,
+    rgba(180, 235, 200, .10) 50%,
     transparent 70%
   );
   animation: orb5 26s ease-in-out infinite;
@@ -2083,13 +2082,37 @@ a.contact-channel__value:hover { color: var(--c-gold); }
   50%        { transform: translate(-60px, 70px) scale(1.12); }
 }
 
-/* Sections avec fond alterné — léger calque sur les orbes */
+/* ——————————————————————————————————————————
+   Toutes les sections : transparentes pour laisser
+   les orbes du fond se voir à travers
+—————————————————————————————————————————— */
+.section-intro,
+.section-services-preview,
+.section-portfolio-preview,
+.section-values,
+.section-testimonials-preview,
+.section-testimonials,
+.section-portfolio,
+.section-services-detail,
+.section-about-story,
+.section-about-values,
+.section-about-process,
+.section-about-equipment,
+.section-about-zone,
+.section-faq,
+.section-contact,
+.section-legal,
+.page-hero {
+  background: transparent;
+}
+
+/* Sections "alternées" : très léger voile pour garder le rythme visuel */
 .section-intro,
 .section-portfolio-preview,
 .section-about-story,
 .section-about-process,
 .section-about-zone {
-  background: rgba(240, 244, 238, .72);
+  background: rgba(220, 236, 222, .18);
 }
 
 /* Sections sombres : pas de transparence — elles masquent les orbes */
