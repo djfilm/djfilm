@@ -14,6 +14,9 @@ timezone:    Europe/Paris
 url:     "https://djfilm.fr"
 baseurl: ""          # vide = site servi à la racine (repo nommé djfilm.github.io)
 
+# Hub DJfilm — Linktree "maison" (modifier cette URL à tout moment)
+hub_url: "https://hub.djfilm.fr"
+
 # Image par défaut Open Graph/Twitter
 og_image: "/assets/images/og-default.jpg"
 

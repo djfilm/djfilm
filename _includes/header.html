@@ -30,8 +30,31 @@
       </ul>
     </nav>
 
+    <!-- Hub — lien vers le linktree maison -->
+    <a
+      href="{{ site.hub_url }}"
+      class="hub-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="{{ g.hub.label }} — {{ g.hub.tooltip }}"
+      title="{{ g.hub.tooltip }}"
+    >
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="3"  cy="3"  r="1.6" fill="currentColor"/>
+        <circle cx="8"  cy="3"  r="1.6" fill="currentColor"/>
+        <circle cx="13" cy="3"  r="1.6" fill="currentColor"/>
+        <circle cx="3"  cy="8"  r="1.6" fill="currentColor"/>
+        <circle cx="8"  cy="8"  r="1.6" fill="currentColor"/>
+        <circle cx="13" cy="8"  r="1.6" fill="currentColor"/>
+        <circle cx="3"  cy="13" r="1.6" fill="currentColor"/>
+        <circle cx="8"  cy="13" r="1.6" fill="currentColor"/>
+        <circle cx="13" cy="13" r="1.6" fill="currentColor"/>
+      </svg>
+    </a>
+
     <!-- Bouton menu mobile -->
     <button
+      type="button"
       class="nav-toggle"
       id="nav-toggle"
       aria-controls="site-nav"

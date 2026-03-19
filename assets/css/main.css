@@ -388,6 +388,27 @@ main a:not([class]):hover {
 }
 .nav-item--cta .btn--outline-gold::after { display: none; }
 
+/* Hub button */
+.hub-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--c-border-gold);
+  color: var(--c-gold);
+  background: var(--c-gold-subtle);
+  flex-shrink: 0;
+  transition: background var(--dur-fast), border-color var(--dur-fast), color var(--dur-fast), transform var(--dur-fast);
+}
+.hub-btn:hover {
+  background: var(--c-gold);
+  border-color: var(--c-gold);
+  color: #fff;
+  transform: scale(1.08);
+}
+
 /* Hamburger */
 .nav-toggle {
   display: none;

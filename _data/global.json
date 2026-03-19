@@ -58,6 +58,11 @@
       "production audiovisuelle Agen"
     ]
   },
+  "hub": {
+    "url": "https://hub.djfilm.fr",
+    "label": "Hub DJfilm",
+    "tooltip": "Tous mes liens"
+  },
   "legal": {
     "company_name": "DJfilm",
     "legal_form": "Entreprise individuelle",
