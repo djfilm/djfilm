@@ -12,7 +12,7 @@ timezone:    Europe/Paris
 
 # ------------------------------ 2) URL & déploiement -------------------------
 url:     "https://djfilm.fr"
-baseurl: ""
+baseurl: "/djfilm"   # nom exact du repo GitHub — à vider ("") quand le domaine custom djfilm.fr sera actif
 
 # Image par défaut Open Graph/Twitter
 og_image: "/assets/images/og-default.jpg"
