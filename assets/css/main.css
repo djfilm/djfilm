@@ -348,18 +348,16 @@ main a:not([class]):hover {
 
 /* Logo */
 .site-logo {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: -.01em;
-  line-height: 1;
-  color: var(--c-white);
   flex-shrink: 0;
   transition: opacity var(--dur-fast);
 }
 .site-logo:hover { opacity: .8; }
-.logo-dj { color: var(--c-white); }
-.logo-film { color: var(--c-gold); }
+.logo-img {
+  display: block;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
 
 /* Nav */
 .site-nav { margin-left: auto; }
