@@ -697,6 +697,9 @@ main a:not([class]):hover {
   border-radius: var(--radius-md);
   display: block;
 }
+video.intro-image {
+  aspect-ratio: 16/9;
+}
 .intro-image-frame {
   position: absolute;
   inset: -var(--space-4);
