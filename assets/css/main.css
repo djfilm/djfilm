@@ -404,6 +404,15 @@ main a:not([class]):hover {
   padding: .6rem var(--space-5);
   font-size: var(--text-xs);
   letter-spacing: .06em;
+  background: linear-gradient(135deg, var(--c-gold) 0%, var(--c-gold-light) 100%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(63,168,118,.28);
+}
+.nav-item--cta .btn--outline-gold:hover {
+  background: linear-gradient(135deg, var(--c-gold) 0%, var(--c-gold-light) 100%);
+  filter: brightness(1.06);
+  box-shadow: 0 6px 24px rgba(63,168,118,.38);
 }
 .nav-item--cta .btn--outline-gold::after { display: none; }
 
@@ -550,13 +559,11 @@ main a:not([class]):hover {
   font-weight: 400;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--c-text-muted);
   margin-bottom: var(--space-5);
 }
 
 .hero__desc {
   font-size: clamp(var(--text-base), 2vw, var(--text-lg));
-  color: var(--c-text-muted);
   line-height: var(--leading-loose);
   max-width: 52ch;
   margin-inline: auto;
