@@ -1180,7 +1180,7 @@ video.intro-image::-internal-media-controls-button-panel { display: none !import
   font-family: var(--font-serif);
   font-size: var(--text-5xl);
   font-weight: 400;
-  color: var(--c-surface-alt);
+  color: var(--c-accent);
   line-height: 1;
   margin-bottom: var(--space-4);
   letter-spacing: -.04em;
