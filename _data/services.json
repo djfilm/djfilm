@@ -60,8 +60,8 @@
       "id": "entreprise",
       "icon": "briefcase",
       "number": "02",
-      "title": "Film d'Entreprise",
-      "subtitle": "Institutionnel & Image de Marque",
+      "title": "Film & Événements d'Entreprise",
+      "subtitle": "Institutionnel · Événementiel · Image de Marque",
       "tagline": "Votre identité, filmée avec précision",
       "description": "Un film d'entreprise bien réalisé est l'un des outils de communication les plus puissants. Il humanise votre marque, inspire confiance et génère de l'engagement. Je travaille avec vous pour créer un contenu qui reflète fidèlement vos valeurs et vos ambitions.",
       "features": [
@@ -82,8 +82,18 @@
         "Montage, étalonnage & post-production",
         "Validation et livraison"
       ],
-      "thumbnail": "/assets/images/services/service-entreprise.jpg",
-      "thumbnail_alt": "Film d'entreprise professionnel par DJfilm Agen",
+      "thumbnail": "/assets/images/services/film&evenement-entreprise/film&evenement-entreprise_1.webp",
+      "thumbnail_alt": "Film et événements d'entreprise par DJfilm Agen",
+      "images": [
+        "/assets/images/services/film&evenement-entreprise/film&evenement-entreprise_1.webp",
+        "/assets/images/services/film&evenement-entreprise/film&evenement-entreprise_2.webp",
+        "/assets/images/services/film&evenement-entreprise/film&evenement-entreprise_3.webp",
+        "/assets/images/services/film&evenement-entreprise/film&evenement-entreprise_4.webp",
+        "/assets/images/services/film&evenement-entreprise/film&evenement-entreprise_5.webp",
+        "/assets/images/services/film&evenement-entreprise/film&evenement-entreprise_6.webp",
+        "/assets/images/services/film&evenement-entreprise/film&evenement-entreprise_7.webp",
+        "/assets/images/services/film&evenement-entreprise/film&evenement-entreprise_8.webp"
+      ],
       "cta": {
         "label": "Demander un devis",
         "url": "/contact/?service=entreprise"
@@ -171,39 +181,6 @@
       },
       "zone": "France entière, production délocalisée possible",
       "keywords": ["spot publicitaire Agen", "vidéo réseaux sociaux Agen", "production vidéo pub 47"]
-    },
-    {
-      "id": "seminaire",
-      "icon": "users",
-      "number": "05",
-      "title": "Séminaire d'Entreprise",
-      "subtitle": "Team Building · Conventions · Formations",
-      "tagline": "Valorisez vos moments d'équipe",
-      "description": "Le séminaire d'entreprise est un moment fort de cohésion et de stratégie. Je vous aide à en garder une trace précieuse : un film qui reflète l'ambiance, les échanges et les décisions, à partager en interne ou en externe.",
-      "features": [
-        "Captation des plénières et ateliers",
-        "Film de synthèse complet (3 à 8 min)",
-        "Portrait des intervenants",
-        "Moments de convivialité et networking",
-        "Teaser ou aftermovie (1 à 2 min)",
-        "Discrétion et réactivité garanties",
-        "Livraison rapide (5 à 10 jours)"
-      ],
-      "process": [
-        "Échange sur le programme et les attentes",
-        "Participation à tout ou partie du séminaire",
-        "Montage et étalonnage",
-        "Présentation du montage",
-        "Livraison"
-      ],
-      "thumbnail": "/assets/images/services/service-seminaire.jpg",
-      "thumbnail_alt": "Captation de séminaire d'entreprise par DJfilm Agen",
-      "cta": {
-        "label": "Organiser ma captation",
-        "url": "/contact/?service=seminaire"
-      },
-      "zone": "Agen, Bordeaux, Toulouse et toute la France",
-      "keywords": ["vidéo séminaire Agen", "captation séminaire Lot-et-Garonne", "film corporate séminaire"]
     }
   ],
   "equipment": {
