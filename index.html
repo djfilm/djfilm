@@ -66,15 +66,16 @@ keywords:
         </div>
       </div>
       <div class="intro-image-wrap" data-reveal data-reveal-delay="2">
-        <img
-          src="{{ d.intro.image | relative_url }}"
-          alt="{{ d.intro.image_alt }}"
+        <video
           class="intro-image"
-          loading="lazy"
-          decoding="async"
-          width="600"
-          height="800"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
         >
+          <source src="/assets/videos/Accueil%203.mp4" type="video/mp4">
+        </video>
         <div class="intro-image-frame" aria-hidden="true"></div>
       </div>
     </div>
