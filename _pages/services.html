@@ -39,10 +39,13 @@ breadcrumbs:
 
     {% for service in d.services %}
     <div class="service-block" id="{{ service.id }}" data-reveal>
-      <div class="service-block__content">
+      <div class="service-block__header">
         <div class="service-block__number" aria-hidden="true">{{ service.number }}</div>
         <p class="service-block__tagline">{{ service.tagline }}</p>
         <p class="service-block__subtitle">{{ service.subtitle }}</p>
+      </div>
+      <div class="service-block__body">
+      <div class="service-block__content">
         <h2 class="service-block__title">{{ service.title }}</h2>
         <p class="service-block__desc">{{ service.description }}</p>
 
@@ -88,6 +91,7 @@ loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
           height="450"
         >
         {% endif %}
+      </div>
       </div>
     </div>
     {% endfor %}

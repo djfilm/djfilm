@@ -1154,16 +1154,23 @@ video.intro-image::-internal-media-controls-button-panel { display: none !import
 .section-services-detail { background: var(--c-bg); }
 
 .service-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(var(--space-12), 8vw, var(--space-24));
-  align-items: start;
   padding-block: clamp(var(--space-12), 6vw, var(--space-20));
   border-bottom: 1px solid var(--c-border);
 }
 .service-block:last-child { border-bottom: none; }
-.service-block:nth-child(even) { direction: rtl; }
-.service-block:nth-child(even) > * { direction: ltr; }
+
+.service-block__header {
+  margin-bottom: var(--space-6);
+}
+
+.service-block__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(var(--space-12), 8vw, var(--space-24));
+  align-items: start;
+}
+.service-block:nth-child(even) .service-block__body { direction: rtl; }
+.service-block:nth-child(even) .service-block__body > * { direction: ltr; }
 
 .service-block__number {
   font-family: var(--font-serif);
@@ -1246,7 +1253,7 @@ video.intro-image::-internal-media-controls-button-panel { display: none !import
   object-fit: cover;
   opacity: 0;
   animation: carousel-fade-5 25s ease-in-out infinite;
-  will-change: opacity, transform;
+  will-change: opacity;
 }
 
 /* Fallback no-JS — 5 slides, cycle 15s (3s par slide) */
@@ -1257,11 +1264,11 @@ video.intro-image::-internal-media-controls-button-panel { display: none !import
 .service-carousel__slide:nth-child(5) { animation-delay: 12s; }
 
 @keyframes carousel-fade-5 {
-  0%     { opacity: 0; transform: scale(1.06); }
-  5.33%  { opacity: 1; transform: scale(1.04); }
-  20%    { opacity: 1; transform: scale(1.00); }
-  25.33% { opacity: 0; transform: scale(1.00); }
-  100%   { opacity: 0; transform: scale(1.00); }
+  0%     { opacity: 0; }
+  20%    { opacity: 1; }
+  33.33% { opacity: 1; }
+  53.33% { opacity: 0; }
+  100%   { opacity: 0; }
 }
 
 .service-zone {
@@ -2071,9 +2078,11 @@ a.contact-channel__value:hover { color: var(--c-gold); }
   .intro-image-wrap { order: -1; max-width: 400px; margin-inline: auto; }
   .about-story-img { aspect-ratio: 16/9; }
 
-  .service-block { grid-template-columns: 1fr; }
-  .service-block:nth-child(even) { direction: ltr; }
-  .service-block__image { order: -1; aspect-ratio: 16/9; }
+  .service-block__body { grid-template-columns: 1fr; }
+  .service-block:nth-child(even) .service-block__body { direction: ltr; }
+  .service-block__media { order: -1; }
+  .service-block__image { aspect-ratio: 16/9; }
+  .service-carousel { aspect-ratio: 16/9; }
 
   .contact-grid { grid-template-columns: 1fr; }
   .contact-info { order: 2; }
