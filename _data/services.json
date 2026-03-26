@@ -120,9 +120,7 @@
       "images": [
         "/assets/images/services/evenement/evenements_1.webp",
         "/assets/images/services/evenement/evenements_2.webp",
-        "/assets/images/services/evenement/evenements_3.webp",
-        "/assets/images/services/evenement/evenements_4.webp",
-        "/assets/images/services/evenement/evenements_5.webp"
+        "/assets/images/services/evenement/evenements_3.webp"
       ],
       "cta": {
         "label": "Discuter de votre événement",
