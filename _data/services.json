@@ -7,11 +7,8 @@
   "hero": {
     "label": "Services",
     "title": "Chaque projet,\nune approche sur-mesure",
-    "subtitle": "Du film de mariage à la campagne publicitaire — je m'adapte à chaque histoire pour en extraire l'essentiel."
-  },
-  "intro": {
-    "title": "Un accompagnement complet,\nde la conception à la livraison",
-    "text": "Quelle que soit la nature de votre projet, je vous accompagne à chaque étape avec rigueur et sensibilité. De la prise de brief initiale jusqu'à la livraison des fichiers finaux, chaque production est traitée avec le même niveau d'exigence."
+    "subtitle": "Pour vous, pour votre marque, pour vos proches — chaque projet mérite qu'on prenne le temps de comprendre ce qui compte vraiment.",
+    "description": "Je vous accompagne à chaque étape de votre projet. De la prise de contact jusqu'à la livraison de votre film, chaque production est traitée avec le même niveau d'exigence."
   },
   "services": [
     {

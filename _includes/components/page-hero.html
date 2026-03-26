@@ -2,9 +2,10 @@
      components/page-hero.html — Hero des pages intérieures
      Usage : include components/page-hero.html label=... title=... subtitle=...
      ============================================================ -->
-{% assign hero_label    = include.label    | default: '' %}
-{% assign hero_title    = include.title    | default: '' %}
-{% assign hero_subtitle = include.subtitle | default: '' %}
+{% assign hero_label       = include.label       | default: '' %}
+{% assign hero_title       = include.title       | default: '' %}
+{% assign hero_subtitle    = include.subtitle    | default: '' %}
+{% assign hero_description = include.description | default: '' %}
 
 <section class="page-hero" aria-labelledby="page-hero-title">
   <div class="page-hero__inner container">
@@ -14,6 +15,9 @@
     <h1 class="page-hero__title" id="page-hero-title">{{ hero_title }}</h1>
     {% if hero_subtitle != '' %}
     <p class="page-hero__subtitle">{{ hero_subtitle }}</p>
+    {% endif %}
+    {% if hero_description != '' %}
+    <p class="page-hero__description">{{ hero_description }}</p>
     {% endif %}
   </div>
   <div class="page-hero__bg" aria-hidden="true"></div>

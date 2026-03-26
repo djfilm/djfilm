@@ -19,17 +19,7 @@ breadcrumbs:
 {% assign d = site.data.services %}
 
 <!-- Hero -->
-{% include components/page-hero.html label=d.hero.label title=d.hero.title subtitle=d.hero.subtitle %}
-
-<!-- Intro -->
-<section class="section section--sm" style="background: var(--c-bg-alt); border-bottom: 1px solid var(--c-border);">
-  <div class="container">
-    <div style="max-width: 680px;">
-      <h2 class="section-title" data-reveal>{{ d.intro.title }}</h2>
-      <p class="lead" data-reveal data-reveal-delay="1">{{ d.intro.text }}</p>
-    </div>
-  </div>
-</section>
+{% include components/page-hero.html label=d.hero.label title=d.hero.title subtitle=d.hero.subtitle description=d.hero.description %}
 
 <!-- Services détaillés -->
 <section class="section-services-detail section" aria-labelledby="services-title">
