@@ -893,6 +893,95 @@ video.intro-image::-internal-media-controls-button-panel { display: none !import
   color: var(--c-text-muted);
 }
 
+/* --- Carte Départements --- */
+.section-dept-map {
+  background: #1B2A1E;
+  position: relative;
+}
+
+.dept-map-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.dept-map-label {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: rgba(220,240,225,.5);
+}
+
+.dept-map-svg {
+  width: 100%;
+  max-width: 300px;
+}
+
+.dept-edges line {
+  stroke: rgba(93,196,145,.12);
+  stroke-width: 1;
+}
+
+.dept-hex polygon {
+  fill: rgba(255,255,255,.04);
+  stroke: rgba(93,196,145,.3);
+  stroke-width: 1.5;
+  transition: fill .2s ease, stroke .2s ease;
+  cursor: default;
+}
+.dept-hex:hover polygon {
+  fill: rgba(93,196,145,.1);
+  stroke: rgba(93,196,145,.65);
+}
+
+.dept-hex--home polygon {
+  fill: rgba(93,196,145,.13);
+  stroke: var(--c-gold-light);
+  stroke-width: 2;
+}
+.dept-hex--home:hover polygon {
+  fill: rgba(93,196,145,.22);
+}
+
+.dept-num {
+  fill: var(--c-gold-light);
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 400;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+  letter-spacing: .03em;
+}
+.dept-hex--home .dept-num {
+  fill: #fff;
+  font-size: 16px;
+}
+
+.dept-home-dot {
+  fill: var(--c-gold-light);
+  pointer-events: none;
+}
+
+.dept-map-caption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: rgba(220,240,225,.5);
+}
+.dept-map-caption__dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-gold-light);
+  flex-shrink: 0;
+}
+
 /* --- Témoignages preview --- */
 .section-testimonials-preview { background: var(--c-bg); }
 

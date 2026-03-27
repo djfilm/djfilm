@@ -47,16 +47,82 @@ breadcrumbs:
   </div>
 </section>
 
-<!-- Stats -->
-<section class="section-stats section--sm" aria-label="Chiffres clés">
+<!-- Carte départements -->
+<section class="section-dept-map section--sm" aria-label="Zones d'intervention">
   <div class="container">
-    <div class="stats-grid">
-      {% for stat in d.stats %}
-      <div class="stat-item" data-reveal data-reveal-delay="{{ forloop.index }}">
-        <span class="stat-item__value">{{ stat.value }}</span>
-        <span class="stat-item__label">{{ stat.label }}</span>
-      </div>
-      {% endfor %}
+    <div class="dept-map-inner" data-reveal>
+      <p class="dept-map-label">Zones d'intervention</p>
+      <svg class="dept-map-svg" viewBox="0 0 340 307" aria-label="Carte des 8 départements d'intervention : 24, 31, 32, 33, 40, 46, 47, 82" role="img">
+        <title>Départements couverts : Dordogne (24), Gironde (33), Lot-et-Garonne (47), Lot (46), Landes (40), Gers (32), Tarn-et-Garonne (82), Haute-Garonne (31)</title>
+        <!-- Liaisons entre départements voisins -->
+        <g class="dept-edges" aria-hidden="true">
+          <line x1="170" y1="52"  x2="85"  y2="120"/>
+          <line x1="170" y1="52"  x2="170" y2="120"/>
+          <line x1="170" y1="52"  x2="255" y2="120"/>
+          <line x1="85"  y1="120" x2="170" y2="120"/>
+          <line x1="170" y1="120" x2="255" y2="120"/>
+          <line x1="85"  y1="120" x2="85"  y2="188"/>
+          <line x1="170" y1="120" x2="170" y2="188"/>
+          <line x1="255" y1="120" x2="255" y2="188"/>
+          <line x1="85"  y1="188" x2="170" y2="188"/>
+          <line x1="170" y1="188" x2="255" y2="188"/>
+          <line x1="170" y1="188" x2="170" y2="256"/>
+          <line x1="255" y1="188" x2="170" y2="256"/>
+        </g>
+        <!-- 24 — Dordogne -->
+        <g class="dept-hex">
+          <title>Dordogne (24)</title>
+          <polygon points="206,52 188,83.2 152,83.2 134,52 152,20.8 188,20.8"/>
+          <text x="170" y="52" class="dept-num">24</text>
+        </g>
+        <!-- 33 — Gironde -->
+        <g class="dept-hex">
+          <title>Gironde (33)</title>
+          <polygon points="121,120 103,151.2 67,151.2 49,120 67,88.8 103,88.8"/>
+          <text x="85" y="120" class="dept-num">33</text>
+        </g>
+        <!-- 47 — Lot-et-Garonne (base) -->
+        <g class="dept-hex dept-hex--home">
+          <title>Lot-et-Garonne (47) — Basé à Agen</title>
+          <polygon points="206,120 188,151.2 152,151.2 134,120 152,88.8 188,88.8"/>
+          <text x="170" y="120" class="dept-num">47</text>
+          <circle cx="170" cy="105" r="3.5" class="dept-home-dot"/>
+        </g>
+        <!-- 46 — Lot -->
+        <g class="dept-hex">
+          <title>Lot (46)</title>
+          <polygon points="291,120 273,151.2 237,151.2 219,120 237,88.8 273,88.8"/>
+          <text x="255" y="120" class="dept-num">46</text>
+        </g>
+        <!-- 40 — Landes -->
+        <g class="dept-hex">
+          <title>Landes (40)</title>
+          <polygon points="121,188 103,219.2 67,219.2 49,188 67,156.8 103,156.8"/>
+          <text x="85" y="188" class="dept-num">40</text>
+        </g>
+        <!-- 32 — Gers -->
+        <g class="dept-hex">
+          <title>Gers (32)</title>
+          <polygon points="206,188 188,219.2 152,219.2 134,188 152,156.8 188,156.8"/>
+          <text x="170" y="188" class="dept-num">32</text>
+        </g>
+        <!-- 82 — Tarn-et-Garonne -->
+        <g class="dept-hex">
+          <title>Tarn-et-Garonne (82)</title>
+          <polygon points="291,188 273,219.2 237,219.2 219,188 237,156.8 273,156.8"/>
+          <text x="255" y="188" class="dept-num">82</text>
+        </g>
+        <!-- 31 — Haute-Garonne -->
+        <g class="dept-hex">
+          <title>Haute-Garonne (31)</title>
+          <polygon points="206,256 188,287.2 152,287.2 134,256 152,224.8 188,224.8"/>
+          <text x="170" y="256" class="dept-num">31</text>
+        </g>
+      </svg>
+      <p class="dept-map-caption">
+        <span class="dept-map-caption__dot" aria-hidden="true"></span>
+        Basé à Agen — Lot-et-Garonne
+      </p>
     </div>
   </div>
 </section>
