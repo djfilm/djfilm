@@ -89,25 +89,6 @@ loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
   </div>
 </section>
 
-<!-- Équipement -->
-<section class="section" style="background: var(--c-bg-alt); border-top: 1px solid var(--c-border);" aria-labelledby="equipment-title">
-  <div class="container">
-    <p class="section-label" data-reveal>{{ d.equipment.label }}</p>
-    <h2 class="section-title" id="equipment-title" data-reveal data-reveal-delay="1">{{ d.equipment.title }}</h2>
-    <div class="equipment-grid">
-      {% for item in d.equipment.items %}
-      <div class="equipment-item" data-reveal data-reveal-delay="{{ forloop.index | modulo: 3 | plus: 1 }}">
-        <div class="equipment-item__bullet" aria-hidden="true"></div>
-        <div>
-          <div class="equipment-item__category">{{ item.category }}</div>
-          <div class="equipment-item__detail">{{ item.detail }}</div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- CTA -->
 <section class="cta-banner section" aria-labelledby="services-cta-title">
   <div class="cta-banner__inner container text-center">

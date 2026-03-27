@@ -7,16 +7,14 @@
   "hero": {
     "label": "À propos",
     "title": "Derrière l'objectif,\nune passion sincère",
-    "subtitle": "Vidéaste depuis 2018, basé à Agen au cœur du Lot-et-Garonne."
+    "subtitle": ""
   },
   "story": {
     "label": "Mon histoire",
     "title": "De la passion\nau métier",
     "paragraphs": [
-      "Tout a commencé avec une caméra empruntée et une envie irrépressible de capturer le monde tel qu'il est — dans sa beauté brute, ses instants fugaces, ses émotions à fleur de peau. Ce qui n'était qu'une passion d'adolescent est devenu, au fil des années, un métier exigeant et profondément gratifiant.",
-      "Après une formation en audiovisuel et plusieurs années comme assistant de production, j'ai fondé DJfilm en 2018 avec une conviction simple : chaque histoire mérite d'être racontée avec soin. Depuis, j'ai accompagné plus de 150 couples lors de leur mariage, réalisé des dizaines de films d'entreprise et travaillé pour des marques et institutions locales et nationales.",
-      "Basé à Agen, au cœur d'un territoire riche en lumières, en paysages et en humanité, je mets ma sensibilité et mon savoir-faire au service de vos projets — qu'ils soient intimes ou ambitieux, locaux ou nationaux."
-    ],
+      "Tout a commencé avec une caméra empruntée. Ce qui n'était qu'une passion d'adolescent est devenu, au fil des années, un métier exigeant et profondément gratifiant.",
+      "Formé à l’audiovisuel, j’ai créé DJFilm en 2026 après plusieurs années de pratique. Depuis, je réalise des films de mariage, des films d’entreprise et des projets pour des particuliers, avec une approche sincère, sobre et soignée."    ],
     "image": "/assets/images/about-story.jpg",
     "image_alt": "DJfilm, vidéaste professionnel en tournage à Agen"
   },
