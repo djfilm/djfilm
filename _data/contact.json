@@ -18,16 +18,16 @@
       "id": "phone",
       "icon": "phone",
       "label": "Par téléphone",
-      "value": "06 12 34 56 78",
-      "url": "tel:+33612345678",
+      "value": "06 84 88 10 15",
+      "url": "tel:+33684881015",
       "detail": "Du lundi au vendredi, 9h–19h"
     },
     {
       "id": "email",
       "icon": "mail",
       "label": "Par e-mail",
-      "value": "contact@djfilm.fr",
-      "url": "mailto:contact@djfilm.fr",
+      "value": "djfilm@outlook.fr",
+      "url": "mailto:djfilm@outlook.fr",
       "detail": "Réponse sous 48h ouvrées"
     },
     {

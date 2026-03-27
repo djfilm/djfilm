@@ -209,7 +209,7 @@
         const message = (contactForm.querySelector('#message') || {}).value || '';
         const subject = encodeURIComponent('Demande depuis djfilm.fr — ' + service);
         const body    = encodeURIComponent('Nom : ' + name + '\nEmail : ' + email + '\nService : ' + service + '\n\n' + message);
-        window.location.href = 'mailto:contact@djfilm.fr?subject=' + subject + '&body=' + body;
+        window.location.href = 'mailto:djfilm@outlook.fr?subject=' + subject + '&body=' + body;
       }
     });
   }
