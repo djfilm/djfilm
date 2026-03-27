@@ -98,7 +98,7 @@
   "zone": {
     "label": "Zone d'intervention",
     "title": "Basé à Agen,\nactif partout",
-    "text": "Je suis principalement actif en Lot-et-Garonne (47) et départements limitrophes, mais je me déplace sur l'ensemble du territoire français pour les projets qui le méritent.",
+    "text": "Je suis principalement actif en Lot-et-Garonne (47) et départements limitrophes.",
     "regions": [
       "Lot-et-Garonne (47)",
       "Dordogne (24)",
@@ -114,7 +114,7 @@
   },
   "cta": {
     "title": "Envie de travailler ensemble ?",
-    "text": "Contactez-moi pour discuter de votre projet — premier échange toujours gratuit.",
+    "text": "Contactez-moi pour discuter de votre projet.",
     "cta": {
       "label": "Me contacter",
       "url": "/contact/"

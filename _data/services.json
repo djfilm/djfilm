@@ -31,7 +31,7 @@
         "Livraison en 4K"
       ],
       "process": [
-        "Appel découverte gratuit",
+        "Appel découverte",
         "Rencontre préparatoire",
         "Tournage le jour du mariage",
         "Montage & post-production",
@@ -157,9 +157,9 @@
   },
   "cta": {
     "title": "Parlons de votre projet",
-    "text": "Devis gratuit sous 48h. Disponible en Lot-et-Garonne, Nouvelle-Aquitaine et toute la France.",
+    "text": "Disponible en Lot-et-Garonne et départements limitrophes.",
     "cta": {
-      "label": "Demander un devis gratuit",
+      "label": "Demander un devis",
       "url": "/contact/"
     }
   }
