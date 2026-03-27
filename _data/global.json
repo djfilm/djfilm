@@ -28,19 +28,23 @@
       "handle": "@djfilm_agen",
       "label": "Instagram"
     },
-    "vimeo": {
-      "url": "https://vimeo.com/djfilm",
-      "handle": "djfilm",
-      "label": "Vimeo"
-    },
-    "linkedin": {
-      "url": "https://linkedin.com/company/djfilm-agen",
-      "label": "LinkedIn"
-    },
     "youtube": {
       "url": "https://youtube.com/@djfilm",
       "handle": "@djfilm",
       "label": "YouTube"
+    },
+    "linkedin_perso": {
+      "url": "https://www.linkedin.com/in/damien-joyeux/",
+      "label": "LinkedIn (Damien Joyeux)"
+    },
+    "linkedin_company": {
+      "url": "https://www.linkedin.com/company/djfilm-fr/",
+      "label": "LinkedIn DJfilm"
+    },
+    "tiktok": {
+      "url": "https://www.tiktok.com/@djfilm37",
+      "handle": "@djfilm37",
+      "label": "TikTok"
     }
   },
   "seo": {
