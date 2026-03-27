@@ -35,7 +35,7 @@
   "services_preview": {
     "label": "02 — Ce que je fais",
     "title": "Des prestations pensées\npour chaque projet",
-    "subtitle": "Du mariage intime à l'événement d'entreprise, chaque production bénéficie du même niveau d'exigence.",
+    "subtitle": "Du mariage à l'événement d'entreprise, chaque production bénéficie du même niveau d'exigence.",
     "cta": {
       "label": "Voir tous les services",
       "url": "/services/"
@@ -45,14 +45,14 @@
         "id": "mariage",
         "icon": "rings",
         "title": "Mariage",
-        "description": "Le mariage est l'un des moments les plus intenses et précieux de votre vie. Je m'efface pour être un témoin discret et attentif, capturant les regards échangés, les rires spontanés, les larmes retenues — tout ce qui fait que votre journée est unique.",
+        "description": "Témoin discret et attentif, je capture les regards échangés, les rires spontanés, les larmes retenues — tout ce qui fait que votre journée est unique.",
         "url": "/services/#mariage"
       },
       {
         "id": "entreprise",
         "icon": "briefcase",
         "title": "Film & Événements d'Entreprise",
-        "description": "Un film d'entreprise bien réalisé est l'un des outils de communication les plus puissants. Il humanise votre marque, inspire confiance et génère de l'engagement. Je travaille avec vous pour créer un contenu qui reflète fidèlement vos valeurs et vos ambitions.",
+        "description": "Un film d'entreprise humanise votre marque, inspire confiance et génère de l'engagement. Je crée avec vous un contenu qui reflète fidèlement vos valeurs et vos ambitions.",
         "url": "/services/#entreprise"
       },
       {

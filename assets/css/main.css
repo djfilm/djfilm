@@ -1863,10 +1863,6 @@ a.contact-channel__value:hover { color: var(--c-gold); }
 .contact-map-wrap { display: flex; align-items: center; justify-content: center; }
 
 .contact-map {
-  background: var(--c-bg-card);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-lg);
-  padding: clamp(var(--space-8), 4vw, var(--space-12));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1883,35 +1879,35 @@ a.contact-channel__value:hover { color: var(--c-gold); }
 
 .contact-map__svg {
   width: 100%;
-  max-width: 480px;
+  max-width: 680px;
   overflow: visible;
 }
 
 .cmap-path path {
-  fill: var(--c-bg);
-  stroke: var(--c-border);
+  fill: var(--c-gold-subtle);
+  stroke: var(--c-gold);
   stroke-width: 1;
   stroke-linejoin: round;
   transition: fill .2s ease, stroke .2s ease;
   cursor: default;
 }
 .cmap-path:hover path {
-  fill: var(--c-gold-subtle);
-  stroke: var(--c-border-gold);
+  fill: rgba(63,168,118,.2);
+  stroke: var(--c-gold);
   stroke-width: 1.5;
 }
 
 .cmap-path--home path {
-  fill: var(--c-gold-subtle);
+  fill: rgba(63,168,118,.22);
   stroke: var(--c-gold);
-  stroke-width: 1.5;
+  stroke-width: 2;
 }
 .cmap-path--home:hover path {
-  fill: rgba(196,160,80,.18);
+  fill: rgba(63,168,118,.32);
 }
 
 .cmap-num {
-  fill: var(--c-text-muted);
+  fill: var(--c-gold-dark);
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 500;
@@ -1921,9 +1917,9 @@ a.contact-channel__value:hover { color: var(--c-gold); }
   letter-spacing: .06em;
 }
 .cmap-path--home .cmap-num {
-  fill: var(--c-gold);
-  font-size: 12px;
-  font-weight: 600;
+  fill: var(--c-gold-dark);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .cmap-home-dot {

@@ -78,37 +78,39 @@
     ]
   },
   "profile": {
-    "name": "Damien Jourdain",
+    "name": "Damien Joyeux",
     "title": "Vidéaste & Réalisateur",
     "location": "Agen, Lot-et-Garonne",
     "bio": "Formé en audiovisuel, passionné de cinéma depuis l'adolescence. Je filme des histoires depuis 2018.",
     "photo": "/assets/images/about-portrait.jpg",
-    "photo_alt": "Damien Jourdain, vidéaste DJfilm à Agen"
+    "photo_alt": "Damien Joyeux, vidéaste DJfilm à Agen"
   },
   "equipment": {
     "label": "Équipement",
     "title": "Du matériel professionnel\npour des résultats premium",
     "items": [
-      { "category": "Caméras", "detail": "Sony FX3 + Sony A7 IV — 4K cinématique" },
-      { "category": "Objectifs", "detail": "Sigma Art, Tamron — piqué et bokeh maîtrisés" },
-      { "category": "Stabilisation", "detail": "DJI RS 3 Pro — fluidité garantie" },
-      { "category": "Drone", "detail": "DJI Mavic 3 — télépilote breveté" },
-      { "category": "Son", "detail": "Rode & Sennheiser — qualité broadcast" },
-      { "category": "Éclairage", "detail": "Aputure LED — maîtrise de la lumière" }
+      { "category": "Caméras", "detail": "DJI Osmo Pocket 3 — 4K cinématique" },
+      { "category": "Drone", "detail": "DJI Mini 3 — Formation A1 A3" },
+      { "category": "Son", "detail": "DJI Mic 2" },
+      { "category": "Éclairage", "detail": "Paneaux LED — Eclairage variable" }
     ]
   },
   "zone": {
     "label": "Zone d'intervention",
     "title": "Basé à Agen,\nactif partout",
-    "text": "Je suis principalement actif en Lot-et-Garonne (47), en Gironde (33) et en Haute-Garonne (31), mais je me déplace sur l'ensemble du territoire français pour les projets qui le méritent.",
+    "text": "Je suis principalement actif en Lot-et-Garonne (47) et départements limitrophes, mais je me déplace sur l'ensemble du territoire français pour les projets qui le méritent.",
     "regions": [
       "Lot-et-Garonne (47)",
-      "Gironde (33)",
-      "Haute-Garonne (31)",
       "Dordogne (24)",
+      "Gironde (33)",
+      "Lot (46)",
+      "Landes (40)",
+      "Gers (32)",
       "Tarn-et-Garonne (82)",
-      "France entière sur demande"
-    ]
+      "Haute-Garonne (31)",
+      "Pyrénées-Atlantiques (64)",
+      "Hautes-Pyrénées (65)"
+      ]
   },
   "cta": {
     "title": "Envie de travailler ensemble ?",
