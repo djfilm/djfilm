@@ -1886,25 +1886,27 @@ a.contact-channel__value:hover { color: var(--c-gold); }
 .cmap-path path {
   fill: var(--c-gold-subtle);
   stroke: var(--c-gold);
-  stroke-width: 0.5;
+  stroke-width: 1;
   stroke-linejoin: round;
+  paint-order: stroke fill;
   transition: fill .2s ease, stroke .2s ease;
   cursor: default;
 }
 .cmap-path:hover path {
   fill: rgba(63,168,118,.2);
   stroke: var(--c-gold);
-  stroke-width: 0.5;
+  stroke-width: 1;
 }
 
 .cmap-path--home path {
   fill: rgba(63,168,118,.22);
   stroke: var(--c-gold);
-  stroke-width: 1.5;
+  stroke-width: 2.5;
+  paint-order: stroke fill;
 }
 .cmap-path--home:hover path {
   fill: rgba(63,168,118,.32);
-  stroke-width: 1.5;
+  stroke-width: 2.5;
 }
 
 .cmap-num {
