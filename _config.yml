@@ -39,10 +39,10 @@ author:
   youtube:           "https://youtube.com/@djfilm33"
   tiktok:            "https://www.tiktok.com/@djfilm37"
   sameAs:
-    - "https://instagram.com/djfilm_agen"
+    - "https://instagram.com/djfilm_33"
     - "https://www.linkedin.com/in/damien-joyeux/"
     - "https://www.linkedin.com/company/djfilm-fr/"
-    - "https://youtube.com/@djfilm"
+    - "https://youtube.com/@djfilm33"
     - "https://www.tiktok.com/@djfilm37"
 
 # ------------------------------ 4) Plugins compatibles GitHub Pages -----------
@@ -52,16 +52,16 @@ plugins:
 
 # ------------------------------ 5) SEO (jekyll-seo-tag) ----------------------
 twitter:
-  username: djfilm_agen
+  username: djfilm33
   card:     summary_large_image
 
 social:
   name:  DJfilm
   links:
-    - "https://instagram.com/djfilm_agen"
+    - "https://instagram.com/djfilm33"
     - "https://www.linkedin.com/in/damien-joyeux/"
     - "https://www.linkedin.com/company/djfilm-fr/"
-    - "https://youtube.com/@djfilm"
+    - "https://youtube.com/@djfilm33"
     - "https://www.tiktok.com/@djfilm37"
 
 google_analytics: ""
