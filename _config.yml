@@ -33,15 +33,17 @@ author:
   address_region: "Lot-et-Garonne"
   address_country: "FR"
   url:            "https://djfilm.fr"
-  instagram:      "https://instagram.com/djfilm_agen"
-  vimeo:          "https://vimeo.com/djfilm"
-  linkedin:       "https://www.linkedin.com/in/damien-joyeux/"
-  youtube:        "https://youtube.com/@djfilm"
+  instagram:         "https://instagram.com/djfilm33"
+  linkedin:          "https://www.linkedin.com/in/damien-joyeux/"
+  linkedin_company:  "https://www.linkedin.com/company/djfilm-fr/"
+  youtube:           "https://youtube.com/@djfilm33"
+  tiktok:            "https://www.tiktok.com/@djfilm37"
   sameAs:
     - "https://instagram.com/djfilm_agen"
-    - "https://vimeo.com/djfilm"
     - "https://www.linkedin.com/in/damien-joyeux/"
+    - "https://www.linkedin.com/company/djfilm-fr/"
     - "https://youtube.com/@djfilm"
+    - "https://www.tiktok.com/@djfilm37"
 
 # ------------------------------ 4) Plugins compatibles GitHub Pages -----------
 plugins:
@@ -57,9 +59,10 @@ social:
   name:  DJfilm
   links:
     - "https://instagram.com/djfilm_agen"
-    - "https://vimeo.com/djfilm"
     - "https://www.linkedin.com/in/damien-joyeux/"
+    - "https://www.linkedin.com/company/djfilm-fr/"
     - "https://youtube.com/@djfilm"
+    - "https://www.tiktok.com/@djfilm37"
 
 google_analytics: ""
 
