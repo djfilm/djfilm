@@ -348,4 +348,79 @@
     });
   }
 
+
+  /* =====================================================================
+     12. SERVICE WORKER + BANNIÈRE D'INSTALLATION PWA
+     ===================================================================== */
+
+  // Enregistrement du Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/sw.js').catch(function () {});
+    });
+  }
+
+  // Bannière d'installation personnalisée
+  var deferredInstallPrompt = null;
+  var installBanner = null;
+
+  function createInstallBanner() {
+    var banner = document.createElement('div');
+    banner.id = 'pwa-install-banner';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Installer l\'application');
+    banner.innerHTML =
+      '<div class="pwa-banner__content">' +
+        '<img src="/assets/images/Logo_128.webp" alt="DJfilm" class="pwa-banner__icon">' +
+        '<div class="pwa-banner__text">' +
+          '<strong>DJfilm</strong>' +
+          '<span>Installer l\'application</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="pwa-banner__actions">' +
+        '<button id="pwa-install-btn" class="pwa-banner__btn pwa-banner__btn--install">Installer</button>' +
+        '<button id="pwa-dismiss-btn" class="pwa-banner__btn pwa-banner__btn--dismiss" aria-label="Fermer">✕</button>' +
+      '</div>';
+    document.body.appendChild(banner);
+
+    document.getElementById('pwa-install-btn').addEventListener('click', function () {
+      if (!deferredInstallPrompt) return;
+      deferredInstallPrompt.prompt();
+      deferredInstallPrompt.userChoice.then(function () {
+        deferredInstallPrompt = null;
+        hideBanner();
+      });
+    });
+
+    document.getElementById('pwa-dismiss-btn').addEventListener('click', function () {
+      hideBanner();
+      try { sessionStorage.setItem('pwa-dismissed', '1'); } catch (e) {}
+    });
+
+    return banner;
+  }
+
+  function showBanner() {
+    if (!installBanner) installBanner = createInstallBanner();
+    installBanner.classList.add('is-visible');
+  }
+
+  function hideBanner() {
+    if (installBanner) installBanner.classList.remove('is-visible');
+  }
+
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    try {
+      if (sessionStorage.getItem('pwa-dismissed')) return;
+    } catch (ex) {}
+    setTimeout(showBanner, 3000);
+  });
+
+  window.addEventListener('appinstalled', function () {
+    hideBanner();
+    deferredInstallPrompt = null;
+  });
+
 })();
