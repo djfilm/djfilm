@@ -23,6 +23,7 @@
         ],
         "perfect_for": "une couverture simple, propre et maîtrisée.",
         "featured": false,
+        "highlight": true,
         "cta_label": "Demander un devis",
         "cta_url": "/contact/?forfait=essentiel"
       },

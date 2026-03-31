@@ -2281,51 +2281,61 @@ a.contact-channel__value:hover { color: var(--c-gold); }
   box-shadow: var(--shadow-sm);
 }
 
-/* ESSENTIEL — blanc, sobre, entrée de gamme */
-.pricing-card--essentiel:hover {
-  border-color: var(--c-border-gold);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+/* ── ESSENTIEL : mis en avant avec la couleur de marque verte ── */
+.pricing-card--essentiel {
+  border-color: var(--c-gold);
+  box-shadow: 0 0 0 1px rgba(63,168,118,.10), var(--shadow-md);
 }
 
-/* STANDARD — légèrement élevé, touche verte subtile */
+.pricing-card--essentiel:hover {
+  border-color: var(--c-gold-light);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(63,168,118,.18);
+}
+
+.pricing-card--essentiel .pricing-card__name { color: var(--c-gold); }
+
+/* ── STANDARD : neutre, en retrait ── */
 .pricing-card--standard {
-  background: linear-gradient(155deg, rgba(63,168,118,.05) 0%, var(--c-bg-card) 60%);
-  border-color: rgba(63,168,118,.2);
-  box-shadow: var(--shadow-md);
+  border-color: var(--c-border);
+  box-shadow: var(--shadow-sm);
 }
 
 .pricing-card--standard:hover {
-  border-color: var(--c-border-gold);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  border-color: rgba(63,168,118,.18);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
-/* PREMIUM — fond sombre "black card", style bancaire haut de gamme */
+.pricing-card--standard .pricing-card__name { color: var(--c-text-faint); }
+
+/* ── PREMIUM : traitement "carte Gold" (inspiration Crédit Agricole Gold) ── */
+
+/* Couleur ambre/or (ponctuelle, hors token — spécifique au Premium) */
 .pricing-card--featured {
-  background: linear-gradient(145deg, #243d2c 0%, #1B2A1E 55%, #0f1e14 100%);
-  border-color: rgba(93,196,145,.2);
-  box-shadow: 0 8px 40px rgba(10,28,18,.40), inset 0 1px 0 rgba(255,255,255,.06);
+  border-color: rgba(194,152,52,.55);
+  box-shadow: 0 4px 28px rgba(194,152,52,.16), var(--shadow-md);
+  background: linear-gradient(155deg, rgba(201,165,60,.07) 0%, var(--c-bg-card) 55%);
 }
 
 .pricing-card--featured:hover {
-  border-color: rgba(93,196,145,.50);
-  box-shadow: 0 16px 56px rgba(10,28,18,.50), inset 0 1px 0 rgba(255,255,255,.06);
-  transform: translateY(-6px);
+  border-color: rgba(194,152,52,.80);
+  box-shadow: 0 14px 48px rgba(194,152,52,.22);
+  transform: translateY(-4px);
 }
 
-/* Overrides texte sur fond sombre (Premium) */
-.pricing-card--featured .pricing-card__name    { color: var(--c-gold-light); }
-.pricing-card--featured .pricing-card__price   { color: #ffffff; }
-.pricing-card--featured .pricing-card__tagline { color: rgba(220,240,225,.65); }
-.pricing-card--featured .pricing-card__header  { border-bottom-color: rgba(255,255,255,.1); }
-.pricing-card--featured .pricing-card__features li { color: rgba(220,240,225,.80); }
-.pricing-card--featured .pricing-card__note    { color: rgba(255,255,255,.35); border-top-color: rgba(255,255,255,.1); }
-.pricing-card--featured .pricing-card__note strong { color: rgba(255,255,255,.55); }
+.pricing-card--featured .pricing-card__name  { color: #A87C20; }
+.pricing-card--featured .pricing-card__price { color: var(--c-text); }
 
-/* Icône check claire pour fond sombre */
+/* Check icon couleur ambre sur Premium */
 .pricing-card--featured .pricing-card__features li::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='none' stroke='%235DC491' stroke-width='1.2'/%3E%3Cpath d='M5 8l2.5 2.5L11 5.5' stroke='%235DC491' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='none' stroke='%23C29534' stroke-width='1.2'/%3E%3Cpath d='M5 8l2.5 2.5L11 5.5' stroke='%23C29534' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Badge gold ambré pour Premium */
+.pricing-card--featured .pricing-card__badge {
+  background: linear-gradient(135deg, #C29534 0%, #E0B84A 100%);
+  box-shadow: 0 2px 12px rgba(194,149,52,.40);
 }
 
 /* --- Badge "Recommandé" --- */
