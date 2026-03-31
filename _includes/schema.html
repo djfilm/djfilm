@@ -2,6 +2,7 @@
      schema.html — Données structurées Schema.org
      ============================================================ -->
 {% assign g = site.data.global %}
+{% assign testimonials_data = site.data.testimonials %}
 
 <!-- Schema : LocalBusiness / VideoProductionCompany (global, toutes pages) -->
 <script type="application/ld+json">
@@ -19,11 +20,15 @@
     "width": 200,
     "height": 60
   },
-  "image": "{{ site.url }}/assets/images/og-default.jpg",
+  "image": [
+    "{{ site.url }}/assets/images/og-default.jpg",
+    "{{ site.url }}/assets/images/og-home.jpg"
+  ],
   "telephone": "{{ g.contact.phone_raw }}",
   "email": "{{ g.contact.email }}",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Agen",
     "addressLocality": "{{ g.contact.address.city }}",
     "postalCode": "{{ g.contact.address.postal_code }}",
     "addressRegion": "{{ g.contact.address.region }}",
@@ -34,19 +39,30 @@
     "latitude": 44.2004,
     "longitude": 0.6167
   },
-  "areaServed": [
-    {
-      "@type": "AdministrativeArea",
-      "name": "Lot-et-Garonne"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Nouvelle-Aquitaine"
-    },
-    {
-      "@type": "Country",
-      "name": "France"
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Agen+47000+France",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ g.contact.phone_raw }}",
+    "contactType": "customer service",
+    "email": "{{ g.contact.email }}",
+    "availableLanguage": {
+      "@type": "Language",
+      "name": "French"
     }
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Lot-et-Garonne" },
+    { "@type": "AdministrativeArea", "name": "Gironde" },
+    { "@type": "AdministrativeArea", "name": "Haute-Garonne" },
+    { "@type": "AdministrativeArea", "name": "Dordogne" },
+    { "@type": "AdministrativeArea", "name": "Lot" },
+    { "@type": "AdministrativeArea", "name": "Landes" },
+    { "@type": "AdministrativeArea", "name": "Gers" },
+    { "@type": "AdministrativeArea", "name": "Tarn-et-Garonne" },
+    { "@type": "AdministrativeArea", "name": "Pyrénées-Atlantiques" },
+    { "@type": "AdministrativeArea", "name": "Hautes-Pyrénées" },
+    { "@type": "AdministrativeArea", "name": "Nouvelle-Aquitaine" },
+    { "@type": "Country", "name": "France" }
   ],
   "openingHoursSpecification": [
     {
@@ -56,6 +72,16 @@
       "closes": "19:00"
     }
   ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "{{ testimonials_data.testimonials | size }}"
+  },
+  "founder": {
+    "@id": "{{ site.url }}/#person"
+  },
   "sameAs": [
     "{{ g.social.instagram.url }}",
     "{{ g.social.youtube.url }}",
@@ -66,11 +92,12 @@
   "priceRange": "€€",
   "paymentAccepted": "Virement bancaire, chèque",
   "currenciesAccepted": "EUR",
-  "foundingDate": "{{ g.brand.founded }}"
+  "foundingDate": "{{ g.brand.founded }}",
+  "knowsLanguage": "fr"
 }
 </script>
 
-<!-- Schema : WebSite + SearchAction -->
+<!-- Schema : WebSite -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -85,6 +112,89 @@
   "inLanguage": "fr-FR"
 }
 </script>
+
+<!-- Schema : WebPage (type adapté selon la page) -->
+{% if page.page_id == 'home' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ site.url }}/#webpage",
+  "url": "{{ site.url }}/",
+  "name": {{ page.seo_title | jsonify }},
+  "description": {{ page.seo_description | jsonify }},
+  "isPartOf": { "@id": "{{ site.url }}/#website" },
+  "about": { "@id": "{{ site.url }}/#business" },
+  "inLanguage": "fr-FR"
+}
+</script>
+{% elsif page.page_id == 'about' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "{{ site.url }}/a-propos/#webpage",
+  "url": "{{ site.url }}/a-propos/",
+  "name": {{ page.seo_title | jsonify }},
+  "description": {{ page.seo_description | jsonify }},
+  "isPartOf": { "@id": "{{ site.url }}/#website" },
+  "about": { "@id": "{{ site.url }}/#business" },
+  "inLanguage": "fr-FR"
+}
+</script>
+{% elsif page.page_id == 'services' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ site.url }}/services/#webpage",
+  "url": "{{ site.url }}/services/",
+  "name": {{ page.seo_title | jsonify }},
+  "description": {{ page.seo_description | jsonify }},
+  "isPartOf": { "@id": "{{ site.url }}/#website" },
+  "inLanguage": "fr-FR"
+}
+</script>
+{% elsif page.page_id == 'portfolio' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "{{ site.url }}/portfolio/#webpage",
+  "url": "{{ site.url }}/portfolio/",
+  "name": {{ page.seo_title | jsonify }},
+  "description": {{ page.seo_description | jsonify }},
+  "isPartOf": { "@id": "{{ site.url }}/#website" },
+  "inLanguage": "fr-FR"
+}
+</script>
+{% elsif page.page_id == 'faq' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "{{ site.url }}/faq/#webpage",
+  "url": "{{ site.url }}/faq/",
+  "name": {{ page.seo_title | jsonify }},
+  "description": {{ page.seo_description | jsonify }},
+  "isPartOf": { "@id": "{{ site.url }}/#website" },
+  "inLanguage": "fr-FR"
+}
+</script>
+{% elsif page.page_id == 'contact' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "{{ site.url }}/contact/#webpage",
+  "url": "{{ site.url }}/contact/",
+  "name": {{ page.seo_title | jsonify }},
+  "description": {{ page.seo_description | jsonify }},
+  "isPartOf": { "@id": "{{ site.url }}/#website" },
+  "inLanguage": "fr-FR"
+}
+</script>
+{% endif %}
 
 <!-- Schema : BreadcrumbList (si la page définit ses breadcrumbs) -->
 {% if page.breadcrumbs %}
@@ -131,7 +241,7 @@
 </script>
 {% endif %}
 
-<!-- Schema : ItemList pour le portfolio -->
+<!-- Schema : VideoObject list (page portfolio uniquement) -->
 {% if page.page_id == 'portfolio' %}
 {% assign portfolio_data = site.data.portfolio %}
 <script type="application/ld+json">
@@ -145,16 +255,26 @@
     {
       "@type": "ListItem",
       "position": {{ forloop.index }},
-      "name": {{ project.title | jsonify }},
-      "description": {{ project.description | jsonify }}
+      "item": {
+        "@type": "VideoObject",
+        "name": {{ project.title | jsonify }},
+        "description": {{ project.description | jsonify }},
+        "thumbnailUrl": {{ project.thumbnail | jsonify }},
+        "uploadDate": {{ project.date | jsonify }},
+        "embedUrl": {{ project.video_url | jsonify }},
+        "publisher": {
+          "@id": "{{ site.url }}/#business"
+        }
+      }
     }{% endfor %}
   ]
 }
 </script>
 {% endif %}
 
-<!-- Schema : Service (page services uniquement) -->
+<!-- Schema : Service data-driven (page services uniquement) -->
 {% if page.page_id == 'services' %}
+{% assign services_data = site.data.services %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -163,51 +283,23 @@
     "@id": "{{ site.url }}/#business"
   },
   "serviceType": "Production audiovisuelle et vidéo",
-  "areaServed": "Nouvelle-Aquitaine, France",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Nouvelle-Aquitaine"
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Prestations vidéo DJfilm",
-    "itemListElement": [
+    "itemListElement": [{% for service in services_data.services %}{% unless forloop.first %},{% endunless %}
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Film de Mariage",
-          "description": "Film de mariage cinématographique et émotionnel"
+          "name": {{ service.title | jsonify }},
+          "description": {{ service.description | jsonify }},
+          "url": "{{ site.url }}/services/#{{ service.id }}"
         }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Film d'Entreprise",
-          "description": "Films institutionnels, témoignages clients, présentation de produits"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Captation d'Événement",
-          "description": "Conférences, galas, concerts — captation multi-caméras"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Publicité & Contenus",
-          "description": "Spots publicitaires et contenus pour les réseaux sociaux"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Séminaire d'Entreprise",
-          "description": "Captation et film de synthèse de séminaires et conventions"
-        }
-      }
+      }{% endfor %}
     ]
   }
 }
@@ -221,8 +313,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "{{ site.url }}/#person",
   "name": "{{ about_data.profile.name }}",
+  "givenName": "Damien",
+  "familyName": "Joyeux",
   "jobTitle": "{{ about_data.profile.title }}",
+  "description": "{{ about_data.profile.bio }}",
   "worksFor": {
     "@id": "{{ site.url }}/#business"
   },
@@ -233,7 +329,24 @@
     "addressCountry": "FR"
   },
   "url": "{{ site.url }}/a-propos/",
-  "image": "{{ site.url }}{{ about_data.profile.photo }}"
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ site.url }}{{ about_data.profile.photo }}",
+    "caption": "{{ about_data.profile.photo_alt }}"
+  },
+  "sameAs": [
+    "{{ g.social.linkedin_perso.url }}",
+    "{{ g.social.instagram.url }}",
+    "{{ g.social.youtube.url }}"
+  ],
+  "knowsAbout": [
+    "Vidéographie",
+    "Réalisation de films",
+    "Film de mariage",
+    "Production audiovisuelle",
+    "Post-production vidéo",
+    "Pilotage de drone cinématique"
+  ]
 }
 </script>
 {% endif %}
