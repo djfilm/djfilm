@@ -362,7 +362,9 @@ main a:not([class]):hover {
 }
 
 /* Nav — desktop : repositionnée en fixed dans la zone header
-   (hors du <header> pour éviter le bug iOS Safari backdrop-filter + fixed) */
+   (hors du <header> pour éviter le bug iOS Safari backdrop-filter + fixed)
+   Le nav-list se comporte comme un .container (max-width centré) pour
+   s'aligner parfaitement avec le logo dans le header-inner. */
 .site-nav {
   position: fixed;
   top: 0;
@@ -371,13 +373,18 @@ main a:not([class]):hover {
   height: var(--header-h);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  /* Décale vers la gauche pour laisser la place au hub-btn (36px) + gap (--space-8) + padding conteneur */
-  padding-right: calc(var(--container-pad) + 36px + var(--space-8));
-  pointer-events: none; /* passe les clics au header derrière */
+  justify-content: center;
+  pointer-events: none;
   z-index: 100;
 }
-.nav-list { pointer-events: auto; }
+.nav-list {
+  pointer-events: auto;
+  width: 100%;
+  max-width: var(--container-max);
+  padding-inline: var(--container-pad);
+  margin-inline: auto;
+  justify-content: flex-end;
+}
 
 .nav-list {
   display: flex;
@@ -409,19 +416,20 @@ main a:not([class]):hover {
 .nav-link.is-active::after { transform: scaleX(1); }
 .nav-link.is-active { color: var(--c-text); }
 
-/* Navbar transparente sur pages claires (non scrollée) */
-.site-header:not(.is-scrolled) .nav-link { color: #1C1C1E; }
-.site-header:not(.is-scrolled) .nav-link.is-active { color: #1C1C1E; }
-.site-header:not(.is-scrolled) .nav-link:hover { color: var(--c-gold); }
+/* Navbar transparente sur pages claires (non scrollée) —
+   sélecteurs sur .site-nav car la <nav> est hors du <header> */
+.site-nav:not(.is-scrolled) .nav-link { color: #1C1C1E; }
+.site-nav:not(.is-scrolled) .nav-link.is-active { color: #1C1C1E; }
+.site-nav:not(.is-scrolled) .nav-link:hover { color: var(--c-gold); }
 
 /* Homepage : texte blanc sur hero sombre (non scrollée uniquement) */
-body[data-page="home"] .site-header:not(.is-scrolled) .nav-link { color: #fff; }
-body[data-page="home"] .site-header:not(.is-scrolled) .nav-link.is-active { color: #fff; }
+body[data-page="home"] .site-nav:not(.is-scrolled) .nav-link { color: #fff; }
+body[data-page="home"] .site-nav:not(.is-scrolled) .nav-link.is-active { color: #fff; }
 /* Homepage mobile : hamburger blanc sur fond sombre */
 body[data-page="home"] .site-header:not(.is-scrolled) .nav-toggle__bar { background: #fff; }
-/* Homepage mobile : liens noirs dans le menu ouvert (fond blanc) */
-body[data-page="home"] .site-nav.is-open .nav-link,
-body[data-page="home"] .site-nav.is-open .nav-link.is-active { color: var(--c-text); }
+/* Liens toujours sombres dans le menu ouvert (fond blanc), toutes pages */
+.site-nav.is-open .nav-link,
+.site-nav.is-open .nav-link.is-active { color: var(--c-text); }
 
 /* Nav CTA */
 .nav-item--cta .btn--outline-gold {
@@ -439,6 +447,9 @@ body[data-page="home"] .site-nav.is-open .nav-link.is-active { color: var(--c-te
   box-shadow: 0 6px 24px rgba(63,168,118,.38);
 }
 .nav-item--cta .btn--outline-gold::after { display: none; }
+
+/* Hub — item dans la nav-list */
+.nav-item--hub { margin-left: var(--space-2); }
 
 /* Hub button */
 .hub-btn {
@@ -2632,7 +2643,12 @@ a.contact-channel__value:hover { color: var(--c-gold); }
     pointer-events: auto;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
     gap: 0;
+    width: 100%;
+    max-width: none;
+    padding-inline: 0;
+    margin-inline: 0;
     padding-top: var(--space-4);
   }
   .nav-item { width: 100%; border-bottom: 1px solid var(--c-border); }
@@ -2648,6 +2664,8 @@ a.contact-channel__value:hover { color: var(--c-gold); }
   .nav-link:hover { color: var(--c-gold); }
   .nav-link::after { display: none; }
   .nav-item--cta { border-bottom: none; margin-top: var(--space-6); }
+  /* Hub caché dans le menu mobile — il n'est visible que sur desktop */
+  .nav-item--hub { display: none; }
   .nav-item--cta .btn--outline-gold {
     width: 100%;
     justify-content: center;

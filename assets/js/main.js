@@ -17,10 +17,13 @@
 
     function onScroll() {
       const y = window.scrollY;
+      const nav = document.getElementById('site-nav');
       if (y > SCROLL_THRESHOLD) {
         header.classList.add('is-scrolled');
+        if (nav) nav.classList.add('is-scrolled');
       } else {
         header.classList.remove('is-scrolled');
+        if (nav) nav.classList.remove('is-scrolled');
       }
       lastScrollY = y;
     }
