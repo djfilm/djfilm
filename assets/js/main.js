@@ -151,8 +151,9 @@
   /* =====================================================================
      6. PORTFOLIO — FILTRES
      ===================================================================== */
-  const filterBtns  = document.querySelectorAll('.filter-btn');
+  const filterBtns    = document.querySelectorAll('.filter-btn');
   const portfolioCards = document.querySelectorAll('.portfolio-card');
+  const portfolioEmpty = document.getElementById('portfolio-empty');
 
   if (filterBtns.length > 0) {
     filterBtns.forEach(function (btn) {
@@ -162,13 +163,23 @@
         filterBtns.forEach(function (b) { b.classList.remove('is-active'); });
         btn.classList.add('is-active');
 
+        let visibleCount = 0;
         portfolioCards.forEach(function (card) {
           if (cat === 'all' || card.dataset.category === cat) {
             card.classList.remove('is-hidden');
+            visibleCount++;
           } else {
             card.classList.add('is-hidden');
           }
         });
+
+        if (portfolioEmpty) {
+          if (visibleCount === 0) {
+            portfolioEmpty.removeAttribute('hidden');
+          } else {
+            portfolioEmpty.setAttribute('hidden', '');
+          }
+        }
       });
     });
   }
